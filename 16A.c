@@ -5,13 +5,9 @@ int main()
 
   int buff = 0;
   int i,j,row,col,prew=0;
-  int flaga = 1;
-  char name[100];
-  
-  printf ("File name: ");
-  scanf ("%s", name); 
+  int flaga = 1; 
 
-  FILE* file = fopen (name, "r");
+  FILE* file = fopen ("Test", "r");
 
   fscanf (file, "%d", &buff);    
   row = buff;  
