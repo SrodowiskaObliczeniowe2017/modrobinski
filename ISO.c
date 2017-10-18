@@ -2,29 +2,42 @@
 
 int main() 
 {
-   FILE *fp;
-   char buff[255];
-   int i;
+   int buff = 0;
+   int i,j,rows,col;
+   int prew = 0;
 
-   fp = fopen("Dobry", "r");
-   fscanf(fp, "%s", buff);
-   printf("1 : %s\n", buff );
+  FILE* file = fopen ("Dobry", "r");
+  fscanf (file, "%d", &buff);    
+  printf ("%d ", buff);
+  rows = buff;  
 
-   fgets(buff, 255, (FILE*)fp);
-   printf("2: %s\n", buff );
-   
-   fgets(buff, 255, (FILE*)fp);
-   printf("3: %s\n", buff );
+  fscanf (file, "%d", &buff); 
+  printf ("%d ", buff);
+  col = buff;
+
+  fscanf (file, "%d", &buff); 
+  printf ("%d ", buff);
+           
 
    for( i=0; i<rows; i=i+1)
    {
 	for ( j=0;j<col;j=j+1)
 	{
+	   fscanf (file, "%d", &buff);
+	   if (j=0)
+	   {
+		
+	   }
+	   else
+	   {
 
+	   }
+	   fscanf (file, "%d", &buff);
 	}
    }
 
-   fclose(fp);
+   fclose (file);  
+
 
 
    return 0;
